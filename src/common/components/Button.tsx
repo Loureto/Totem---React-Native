@@ -1,5 +1,5 @@
 import { type VariantProps, cva } from "class-variance-authority";
-import { Text, TouchableOpacity } from "react-native";
+import { ActivityIndicator, Text, TouchableOpacity } from "react-native";
 
 import { cn } from "../lib/utils";
 
@@ -10,7 +10,7 @@ const buttonVariants = cva(
       variant: {
         default: "bg-orange-500",
         secondary: "bg-secondary",
-        destructive: "bg-destructive",
+        destructive: "bg-red-500",
         ghost: "bg-slate-700",
         link: "text-primary underline-offset-4",
       },
@@ -32,7 +32,7 @@ const buttonTextVariants = cva("text-center font-medium", {
     variant: {
       default: "text-white",
       secondary: "text-secondary-foreground",
-      destructive: "text-destructive-foreground",
+      destructive: "text-white",
       ghost: "text-primary-foreground",
       link: "text-primary-foreground underline",
     },
@@ -53,6 +53,7 @@ interface ButtonProps
     VariantProps<typeof buttonVariants> {
   label: string;
   labelClasses?: string;
+  isLoading?: boolean;
 }
 function Button({
   label,
@@ -60,6 +61,7 @@ function Button({
   className,
   variant,
   size,
+  isLoading = false,
   ...props
 }: ButtonProps) {
   return (
@@ -67,13 +69,16 @@ function Button({
       className={cn(buttonVariants({ variant, size, className }))}
       {...props}
     >
-      <Text
-        className={cn(
-          buttonTextVariants({ variant, size, className: labelClasses })
-        )}
-      >
-        {label}
-      </Text>
+      {isLoading && <ActivityIndicator size="small" color="#FFF" />}
+      {!isLoading && (
+        <Text
+          className={cn(
+            buttonTextVariants({ variant, size, className: labelClasses })
+          )}
+        >
+          {label}
+        </Text>
+      )}
     </TouchableOpacity>
   );
 }

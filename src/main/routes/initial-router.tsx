@@ -1,8 +1,8 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import { AuthenticationView } from "../factories";
-import IndividualStackRouter from "./individual-router";
+import { AuthenticationView } from "@/modules";
 import CompanyStackRouter from "./company-router";
+import IndividualStackRouter from "./individual-router";
 
 const Stack = createNativeStackNavigator();
 

@@ -1,7 +1,7 @@
 import {
   ConfirmDateIndividualView,
   ConfirmNameIndividualView,
-} from "@/presentation";
+} from "@/modules";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 const Stack = createNativeStackNavigator();

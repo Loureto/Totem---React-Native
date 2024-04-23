@@ -1,4 +1,4 @@
-import { ConfirmDateCompanyView, ConfirmNameCompanyView } from "@/presentation";
+import { ConfirmDateCompanyView, ConfirmNameCompanyView } from "@/modules";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 const Stack = createNativeStackNavigator();
