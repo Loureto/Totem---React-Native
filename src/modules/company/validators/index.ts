@@ -1,1 +1,1 @@
-export * from "./confirm-date-validator";
+export * from "./confirm-date-company-validator";

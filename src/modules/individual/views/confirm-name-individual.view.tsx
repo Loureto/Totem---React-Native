@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import { Button, Checkbox, Container, Text } from "@/common";
 import { Text as TextNative } from "react-native";
-import { ConfirmNameDTO, useConfirmNameMutation } from "./hooks";
+import { ConfirmNameDTO, useConfirmNameMutation } from "../hooks";
 
 const listItems = [
   { id: 1, name: "Nome da empresa" },

@@ -2,9 +2,12 @@ import { useNavigation } from "expo-router";
 import { Controller, useForm } from "react-hook-form";
 
 import { Button, Input, Container, Text } from "@/common";
+import { ConfirmDateType, confirmDateConfig } from "../validators";
 
 export const ConfirmDateIndividualView = () => {
-  const { control } = useForm();
+  const { control, handleSubmit } = useForm<ConfirmDateType>({
+    ...confirmDateConfig,
+  });
   const { navigate } = useNavigation<any>();
   return (
     <Container dismissKeyboard>
@@ -15,7 +18,7 @@ export const ConfirmDateIndividualView = () => {
       </Text.Description>
       <Container className="mt-10">
         <Controller
-          name="document"
+          name="date"
           control={control}
           render={({ field: { onChange, ...rest }, fieldState: { error } }) => (
             <Input
@@ -32,7 +35,7 @@ export const ConfirmDateIndividualView = () => {
       </Container>
       <Button
         label="Próximo"
-        onPress={() => navigate("ConfirmNameIndividualView")}
+        onPress={(value) => navigate("ConfirmNameIndividualView")}
       />
     </Container>
   );
