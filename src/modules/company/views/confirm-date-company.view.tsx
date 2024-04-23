@@ -3,8 +3,7 @@ import { Controller, useForm } from "react-hook-form";
 import { useConfirmDateMutation } from "../hooks";
 import { ConfirmDateType, confirmDateConfig } from "../validators";
 
-import { Button, Container, Input, Text } from "@/common";
-import { dateMask } from "@/utils";
+import { Button, Container, Input, Text, dateMask } from "@/common";
 import { useNavigation } from "expo-router";
 
 export const ConfirmDateCompanyView = () => {

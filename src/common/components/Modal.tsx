@@ -1,4 +1,4 @@
-import { useModalStore } from "@/store";
+import { useModalStore } from "@/common/store";
 import { Modal as ModalNative, View } from "react-native";
 import { Button } from "./Button";
 import { Spacing } from "./Spacing";

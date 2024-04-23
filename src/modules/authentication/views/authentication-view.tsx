@@ -1,9 +1,8 @@
 import { useEffect } from "react";
 import { Controller, useForm } from "react-hook-form";
 
-import { Button, Input, Container, Text } from "@/common";
+import { Button, Input, Container, Text, formattedCpfOrCnpj } from "@/common";
 
-import { formattedCpfOrCnpj } from "@/utils";
 import { useAuthenticationMutation } from "../hooks";
 import { AuthenticationData, configFormProps } from "../validators";
 
