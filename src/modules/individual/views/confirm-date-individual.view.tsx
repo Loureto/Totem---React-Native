@@ -34,6 +34,7 @@ export const ConfirmDateIndividualView = () => {
         />
       </Container>
       <Button
+        size="lg"
         label="Próximo"
         onPress={(value) => navigate("ConfirmNameIndividualView")}
       />

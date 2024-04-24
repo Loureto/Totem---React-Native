@@ -1,5 +1,17 @@
 import { View } from "react-native";
 
-export const Spacing = ({ height }: { height: number }) => {
-  return <View style={{ height: height, width: "100%" }} />;
+type SpacingProps = {
+  width?: number;
+  height?: number;
+};
+
+export const Spacing = ({ width, height }: SpacingProps) => {
+  return (
+    <View
+      style={{
+        height: height ? height : "100%",
+        width: width ? width : "100%",
+      }}
+    />
+  );
 };

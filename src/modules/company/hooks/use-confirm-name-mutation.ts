@@ -15,7 +15,7 @@ export const useConfirmNameMutation = () => {
       return await api.post("/confirm-name", data);
     },
     onSuccess: () => {
-      navigate("ConfirmDateCompanyView");
+      navigate("ServicesStackRouter");
     },
     onError: () => {},
   });

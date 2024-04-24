@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { AuthenticationView } from "@/modules";
 import CompanyStackRouter from "./company-router";
 import IndividualStackRouter from "./individual-router";
+import ServicesStackRouter from "./services-router";
 
 const Stack = createNativeStackNavigator();
 
@@ -18,6 +19,10 @@ export const InitialRouter = () => {
         component={IndividualStackRouter}
       />
       <Stack.Screen name="CompanyStackRouter" component={CompanyStackRouter} />
+      <Stack.Screen
+        name="ServicesStackRouter"
+        component={ServicesStackRouter}
+      />
     </Stack.Navigator>
   );
 };

@@ -18,7 +18,7 @@ export const Checkbox = ({
   return (
     <TouchableOpacity
       className={cn(
-        "w-full flex flex-row items-center justify-between mt-3 px-3 py-3 rounded-md border-2",
+        "w-full flex flex-row items-center justify-between mt-3 px-3 py-3 rounded-md border-2 bg-white",
         isChecked ? "border-orange-500" : "border-gray-200"
       )}
       onPress={onPress}

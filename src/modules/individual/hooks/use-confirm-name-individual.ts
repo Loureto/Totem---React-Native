@@ -12,10 +12,11 @@ export const useConfirmNameMutation = () => {
   const { setAlert } = useModalStore();
   const mutation = useMutation({
     mutationFn: async (data: ConfirmNameDTO): Promise<void> => {
-      return await api.post("/confirm-name", data);
+      // return await api.post("/confirm-name", data);
+      return Promise.resolve();
     },
     onSuccess: () => {
-      navigate("ConfirmDateIndividualView");
+      navigate("ServicesStackRouter");
     },
     onError: () => {},
   });

@@ -23,14 +23,14 @@ export const Container: FC<ViewContainerProps> = ({
   if (dismissKeyboard) {
     return (
       <TouchableWithoutFeedback onPress={handleDismissKeyboard}>
-        <View className={cn("flex-1 bg-white", className)} {...props}>
+        <View className={cn("flex-1 bg-neutral-50", className)} {...props}>
           {children}
         </View>
       </TouchableWithoutFeedback>
     );
   }
   return (
-    <View className={cn("flex-1 bg-white", className)} {...props}>
+    <View className={cn("flex-1 bg-neutral-50", className)} {...props}>
       {children}
     </View>
   );

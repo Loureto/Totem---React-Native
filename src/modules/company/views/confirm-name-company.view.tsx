@@ -44,6 +44,7 @@ export const ConfirmNameCompanyView = () => {
         ))}
       </Container>
       <Button
+        size="lg"
         label="Confirmar"
         isLoading={isLoading}
         onPress={() => handleClickConfirmName(isChecked)}

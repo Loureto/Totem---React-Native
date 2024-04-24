@@ -9,7 +9,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default: "bg-orange-500",
-        secondary: "bg-secondary",
+        secondary: "border border-orange-500",
         destructive: "bg-red-500",
         ghost: "bg-slate-700",
         link: "text-primary underline-offset-4",
@@ -31,10 +31,10 @@ const buttonTextVariants = cva("text-center font-medium", {
   variants: {
     variant: {
       default: "text-white",
-      secondary: "text-secondary-foreground",
+      secondary: "text-orange-500",
       destructive: "text-white",
       ghost: "text-primary-foreground",
-      link: "text-primary-foreground underline",
+      link: "text-orange-500 underline",
     },
     size: {
       default: "text-base",

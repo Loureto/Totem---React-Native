@@ -39,6 +39,7 @@ export const ConfirmDateCompanyView = () => {
       </Container>
 
       <Button
+        size="lg"
         label="Próximo"
         isLoading={isLoading}
         onPress={() => navigate("ConfirmNameCompanyView")}

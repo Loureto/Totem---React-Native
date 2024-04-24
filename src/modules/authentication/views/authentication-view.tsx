@@ -1,8 +1,16 @@
 import { useEffect } from "react";
 import { Controller, useForm } from "react-hook-form";
 
-import { Button, Input, Container, Text, formattedCpfOrCnpj } from "@/common";
+import {
+  Button,
+  Container,
+  Input,
+  Spacing,
+  Text,
+  formattedCpfOrCnpj,
+} from "@/common";
 
+import { Text as TextNative } from "react-native";
 import { useAuthenticationMutation } from "../hooks";
 import { AuthenticationData, configFormProps } from "../validators";
 
@@ -40,12 +48,22 @@ export const AuthenticationView = () => {
             />
           )}
         />
+        <Spacing height={30} />
+        <Button
+          size="lg"
+          label="Entrar"
+          isLoading={isLoading}
+          onPress={handleSubmit((text) => mutate(text.document))}
+        />
+        <TextNative className="my-10 text-gray-500 mx-auto">
+          Ou se preferir
+        </TextNative>
+        <Button
+          size="lg"
+          variant="secondary"
+          label="Segunda via simplificada"
+        />
       </Container>
-      <Button
-        label="Entrar"
-        isLoading={isLoading}
-        onPress={handleSubmit((text) => mutate(text.document))}
-      />
     </Container>
   );
 };

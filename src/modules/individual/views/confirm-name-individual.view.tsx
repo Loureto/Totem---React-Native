@@ -44,6 +44,7 @@ export const ConfirmNameIndividualView = () => {
         ))}
       </Container>
       <Button
+        size="lg"
         label="Confirmar"
         isLoading={isLoading}
         onPress={() => handleClickConfirmName(isChecked)}
