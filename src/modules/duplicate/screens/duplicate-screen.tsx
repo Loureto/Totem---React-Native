@@ -12,7 +12,7 @@ import {
   Th,
   Timer,
 } from "@/components";
-import { CardButton } from "../components";
+import { Card } from "../components";
 import { useActions } from "../hooks";
 import { formatCurrency } from "@/utils";
 
@@ -54,12 +54,7 @@ export const DuplicateScreen = () => {
         através do sistema de autoatendimento.
       </Text.Description>
       <Container className="mt-10">
-        <CardButton
-          uc={data?.uc.toString()}
-          address={data?.address}
-          pendencies={data?.invoice.length}
-          disabled
-        />
+        <Card data={data} isLoading={isLoading} disabled />
         <Spacing height={16} />
         <Table>
           <HeadRow>
@@ -81,13 +76,13 @@ export const DuplicateScreen = () => {
             </View>
           )}
 
-          {!isLoading && !data && (
+          {!data && (
             <View className="flex flex-1 items-center justify-center">
               <Text.Description>Não há pendências</Text.Description>
             </View>
           )}
 
-          {!isLoading && data && (
+          {data && (
             <FlatList
               data={data.invoice}
               renderItem={({ item, index }) => {

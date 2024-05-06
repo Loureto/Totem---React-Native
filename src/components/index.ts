@@ -7,6 +7,7 @@ export * from "./icons";
 export * from "./Input";
 export * from "./Keyboard";
 export * from "./Modal";
+export * from "./Skeleton";
 export * from "./Spacing";
 export * from "./Table";
 export * from "./Text";
