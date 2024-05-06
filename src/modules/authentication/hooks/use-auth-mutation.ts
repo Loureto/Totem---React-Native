@@ -1,7 +1,7 @@
 import { useMutation } from "react-query";
 import { useNavigation } from "@react-navigation/native";
 import { AccountModel } from "../models";
-import { api } from "@/common";
+import { api } from "@/services";
 
 export const useAuthenticationMutation = () => {
   const { navigate } = useNavigation<any>();

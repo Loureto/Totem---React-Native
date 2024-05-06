@@ -1,7 +1,7 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { InitialRouter } from "@/main";
-import { Modal } from "@/common/components";
-import { ReactQueryProvider } from "@/common/providers";
+import { Modal } from "@/components";
+import { ReactQueryProvider } from "@/providers";
 
 export default function App() {
   return (

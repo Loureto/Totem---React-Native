@@ -1,5 +1,5 @@
-import { fetchApi } from "@/common";
 import { useQuery } from "react-query";
+import { fetchApi } from "@/services";
 import { UC } from "../models";
 
 export const useGetDuplicate = () => {

@@ -1,6 +1,6 @@
-import ScreenIdleHandlerProvider from "@/common/providers/screen-idle-handler.provider";
 import { DuplicateScreen } from "@/modules/duplicate";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import ScreenIdleHandlerProvider from "@/providers/screen-idle-handler.provider";
 
 const Stack = createNativeStackNavigator();
 

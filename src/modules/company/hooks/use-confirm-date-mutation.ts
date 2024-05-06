@@ -1,6 +1,6 @@
 import { useMutation } from "react-query";
 import { useNavigation } from "expo-router";
-import { api } from "@/common";
+import { api } from "@/services";
 
 export const useConfirmDateMutation = () => {
   const { navigate } = useNavigation<any>();

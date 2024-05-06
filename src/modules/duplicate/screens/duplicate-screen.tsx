@@ -11,7 +11,7 @@ import {
   Text,
   Th,
   Timer,
-} from "@/common";
+} from "@/components";
 import { CardButton } from "../components";
 import { useActions } from "../hooks";
 

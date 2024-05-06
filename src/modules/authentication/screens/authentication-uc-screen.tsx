@@ -1,15 +1,9 @@
 import { useState } from "react";
 
-import {
-  Button,
-  Container,
-  Keyboard,
-  Spacing,
-  Text,
-  useModalStore,
-} from "@/common";
-import { InputCustom } from "../components";
+import { Button, Container, Keyboard, Spacing, Text } from "@/components";
+import { useModalStore } from "@/store";
 import { useAuthUcMutation } from "../hooks";
+import { InputCustom } from "../components";
 
 export const AuthenticationUcScreen = () => {
   const { isLoading, mutate } = useAuthUcMutation();

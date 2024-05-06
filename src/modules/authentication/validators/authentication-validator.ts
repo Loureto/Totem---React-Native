@@ -1,8 +1,7 @@
 import { z } from "zod";
-import { zodResolver } from "@hookform/resolvers/zod";
 import { UseFormProps } from "react-hook-form";
-import { validatorCPF } from "./cpf.validator";
-import { validatorCNPJ } from "./cnpj.validator";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { validatorCPF, validatorCNPJ } from "@/utils";
 
 const schema = z.object({
   document: z

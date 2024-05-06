@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import { ConfirmNameDTO, useConfirmNameMutation } from "../hooks";
-import { Button, Checkbox, Container, Text } from "@/common";
+import { Button, Checkbox, Container, Text } from "@/components";
 import { Text as TextNative } from "react-native";
 
 const listItems = [
@@ -20,7 +20,7 @@ export const ConfirmNameCompanyView = () => {
   });
 
   return (
-    <Container dismissKeyboard>
+    <Container>
       <Text.Title>Confirme o nome fantasia</Text.Title>
       <Text.Description>
         Selecione uma opção entre as cinco disponíveis para confirmar o nome

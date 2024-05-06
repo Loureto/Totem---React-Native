@@ -1,6 +1,6 @@
-import { Header } from "@/common";
 import { Slot } from "expo-router";
 import { StatusBar, View } from "react-native";
+import { Header } from "@/components";
 
 export default function Layout() {
   return (

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { Button, Checkbox, Container, Text } from "@/common";
+import { Button, Checkbox, Container, Text } from "@/components";
 import { Text as TextNative } from "react-native";
 import { ConfirmNameDTO, useConfirmNameMutation } from "../hooks";
 
@@ -20,7 +20,7 @@ export const ConfirmNameIndividualView = () => {
   });
 
   return (
-    <Container dismissKeyboard>
+    <Container>
       <Text.Title>Confirme o nome da sua mãe</Text.Title>
       <Text.Description>
         Selecione uma opção entre as cinco disponíveis para confirmar o nome da

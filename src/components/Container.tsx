@@ -1,4 +1,4 @@
-import { cn } from "@/common/lib";
+import { cn } from "@/lib";
 import { FC } from "react";
 import { SafeAreaView } from "react-native";
 import { SafeAreaViewProps } from "react-native-safe-area-context";

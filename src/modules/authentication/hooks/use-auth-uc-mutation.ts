@@ -1,7 +1,9 @@
-import { api, useModalStore } from "@/common";
+import { useMutation } from "react-query";
 import { useNavigation } from "@react-navigation/native";
 import { AxiosError, AxiosResponse } from "axios";
-import { useMutation } from "react-query";
+
+import { api } from "@/services";
+import { useModalStore } from "@/store";
 import { AccountModel } from "../models";
 
 export const useAuthUcMutation = () => {

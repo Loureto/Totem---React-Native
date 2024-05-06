@@ -1,7 +1,7 @@
 import { useNavigation } from "expo-router";
 import { Controller, useForm } from "react-hook-form";
 
-import { Button, Input, Container, Text } from "@/common";
+import { Button, Input, Container, Text } from "@/components";
 import { ConfirmDateType, confirmDateConfig } from "../validators";
 
 export const ConfirmDateIndividualView = () => {
@@ -10,7 +10,7 @@ export const ConfirmDateIndividualView = () => {
   });
   const { navigate } = useNavigation<any>();
   return (
-    <Container dismissKeyboard>
+    <Container>
       <Text.Title>Confirme sua data de nascimento</Text.Title>
       <Text.Description>
         Por favor, confirme sua data de nascimento na tela para garantir a

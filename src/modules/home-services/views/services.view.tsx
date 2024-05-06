@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
 
 import { CardButton } from "../components/CardButton";
-import { Container, Text, SegundaViaIcon, ReligacaoIcon } from "@/common";
+import { Container, Text, SegundaViaIcon, ReligacaoIcon } from "@/components";
 
 const styles = StyleSheet.create({
   container: {

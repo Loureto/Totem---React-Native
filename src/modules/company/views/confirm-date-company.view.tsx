@@ -3,8 +3,9 @@ import { Controller, useForm } from "react-hook-form";
 import { useConfirmDateMutation } from "../hooks";
 import { ConfirmDateType, confirmDateConfig } from "../validators";
 
-import { Button, Container, Input, Text, dateMask } from "@/common";
+import { Button, Container, Input, Text } from "@/components";
 import { useNavigation } from "expo-router";
+import { dateMask } from "@/utils";
 
 export const ConfirmDateCompanyView = () => {
   const { navigate } = useNavigation<any>();
@@ -14,7 +15,7 @@ export const ConfirmDateCompanyView = () => {
   });
 
   return (
-    <Container dismissKeyboard>
+    <Container>
       <Text.Title>Confirme a data de fundação</Text.Title>
       <Text.Description>
         Por favor, confirme a data de fundação da sua empresa na tela para

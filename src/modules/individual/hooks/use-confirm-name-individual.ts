@@ -1,6 +1,7 @@
 import { useMutation } from "react-query";
 import { useNavigation } from "expo-router";
-import { api, useModalStore } from "@/common";
+import { api } from "@/services";
+import { useModalStore } from "@/store";
 
 export type ConfirmNameDTO = {
   id: number | null;
