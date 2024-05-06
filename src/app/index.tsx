@@ -1,7 +1,7 @@
-import { Modal } from "@/common";
-import { InitialRouter } from "@/main";
-import { ReactQueryProvider } from "@/common/providers";
 import { NavigationContainer } from "@react-navigation/native";
+import { InitialRouter } from "@/main";
+import { Modal } from "@/common/components";
+import { ReactQueryProvider } from "@/common/providers";
 
 export default function App() {
   return (
@@ -9,6 +9,7 @@ export default function App() {
       <NavigationContainer independent>
         <InitialRouter />
       </NavigationContainer>
+
       <Modal />
     </ReactQueryProvider>
   );

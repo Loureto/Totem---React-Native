@@ -1,16 +1,19 @@
-import { ServicesView } from "@/modules";
+import ScreenIdleHandlerProvider from "@/common/providers/screen-idle-handler.provider";
+import { DuplicateScreen } from "@/modules/duplicate";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 const Stack = createNativeStackNavigator();
 
 export const ServicesStackRouter = () => {
   return (
-    <Stack.Navigator
-      screenOptions={{ headerShown: false }}
-      initialRouteName="ServicesView"
-    >
-      <Stack.Screen name="ServicesView" component={ServicesView} />
-    </Stack.Navigator>
+    <ScreenIdleHandlerProvider>
+      <Stack.Navigator
+        screenOptions={{ headerShown: false }}
+        initialRouteName="ServicesView"
+      >
+        <Stack.Screen name="ServicesView" component={DuplicateScreen} />
+      </Stack.Navigator>
+    </ScreenIdleHandlerProvider>
   );
 };
 

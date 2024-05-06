@@ -10,7 +10,6 @@ import {
   formattedCpfOrCnpj,
 } from "@/common";
 
-import { Text as TextNative } from "react-native";
 import { useAuthenticationMutation } from "../hooks";
 import { AuthenticationData, configFormProps } from "../validators";
 
@@ -25,7 +24,7 @@ export const AuthenticationView = () => {
   }, [reset]);
 
   return (
-    <Container dismissKeyboard>
+    <Container>
       <Text.Title>Bem-vindo de volta!</Text.Title>
       <Text.Description>
         Estamos aqui para tornar sua vida mais fácil. Conte conosco para
@@ -54,14 +53,6 @@ export const AuthenticationView = () => {
           label="Entrar"
           isLoading={isLoading}
           onPress={handleSubmit((text) => mutate(text.document))}
-        />
-        <TextNative className="my-10 text-gray-500 mx-auto">
-          Ou se preferir
-        </TextNative>
-        <Button
-          size="lg"
-          variant="secondary"
-          label="Segunda via simplificada"
         />
       </Container>
     </Container>

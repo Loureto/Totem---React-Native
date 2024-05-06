@@ -1,6 +1,6 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import { AuthenticationView } from "@/modules";
+import { AuthenticationUcScreen } from "@/modules";
 import CompanyStackRouter from "./company-router";
 import IndividualStackRouter from "./individual-router";
 import ServicesStackRouter from "./services-router";
@@ -11,9 +11,12 @@ export const InitialRouter = () => {
   return (
     <Stack.Navigator
       screenOptions={{ headerShown: false }}
-      initialRouteName="AuthenticationView"
+      initialRouteName="AuthenticationUcScreen"
     >
-      <Stack.Screen name="AuthenticationView" component={AuthenticationView} />
+      <Stack.Screen
+        name="AuthenticationUcScreen"
+        component={AuthenticationUcScreen}
+      />
       <Stack.Screen
         name="IndividualStackRouter"
         component={IndividualStackRouter}

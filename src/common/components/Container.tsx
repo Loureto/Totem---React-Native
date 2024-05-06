@@ -1,37 +1,23 @@
-import { FC } from "react";
 import { cn } from "@/common/lib";
-import {
-  Keyboard,
-  TouchableWithoutFeedback,
-  View,
-  ViewProps,
-} from "react-native";
+import { FC } from "react";
+import { SafeAreaView } from "react-native";
+import { SafeAreaViewProps } from "react-native-safe-area-context";
 
-interface ViewContainerProps extends ViewProps {
+interface ViewContainerProps extends SafeAreaViewProps {
   className?: string;
-  dismissKeyboard?: boolean;
 }
 
 export const Container: FC<ViewContainerProps> = ({
   children,
   className,
-  dismissKeyboard,
   ...props
 }) => {
-  const handleDismissKeyboard = () => Keyboard.dismiss();
-
-  if (dismissKeyboard) {
-    return (
-      <TouchableWithoutFeedback onPress={handleDismissKeyboard}>
-        <View className={cn("flex-1 bg-neutral-50", className)} {...props}>
-          {children}
-        </View>
-      </TouchableWithoutFeedback>
-    );
-  }
   return (
-    <View className={cn("flex-1 bg-neutral-50", className)} {...props}>
+    <SafeAreaView
+      className={cn("flex flex-1 bg-neutral-50", className)}
+      {...props}
+    >
       {children}
-    </View>
+    </SafeAreaView>
   );
 };

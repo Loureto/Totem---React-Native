@@ -1,48 +1,45 @@
-import { Text, TouchableOpacity, View } from "react-native";
-import { cn } from "../lib";
 import { AntDesign } from "@expo/vector-icons";
+import { FC } from "react";
+import { TouchableOpacity, TouchableOpacityProps } from "react-native";
+import { cn } from "../lib";
 
-interface CheckboxProps {
-  label: string;
-  labelClasses?: string;
+type CheckboxProps = TouchableOpacityProps & {
   isChecked: boolean;
-  onPress: () => void;
-}
+  variant?: "primary" | "secondary";
+};
 
-export const Checkbox = ({
-  label,
-  labelClasses,
+const variants = {
+  default: "border rounded flex justify-center items-center",
+  button: {
+    primary: (value: boolean) =>
+      `border-orange-500 ${value ? "bg-orange-500" : "bg-transparent"}`,
+    secondary: (value: boolean) =>
+      `border-white ${value ? "bg-white" : "bg-transparent"}`,
+  },
+  icon: {
+    primary: "#FFFFFF",
+    secondary: "#F97316",
+  },
+};
+
+export const CheckBox: FC<CheckboxProps> = ({
   isChecked = false,
-  onPress,
-}: CheckboxProps) => {
+  variant = "primary",
+  className,
+  ...props
+}) => {
   return (
     <TouchableOpacity
       className={cn(
-        "w-full flex flex-row items-center justify-between mt-3 px-3 py-3 rounded-md border-2 bg-white",
-        isChecked ? "border-orange-500" : "border-gray-200"
+        variants.default,
+        variants.button[variant](isChecked),
+        className
       )}
-      onPress={onPress}
+      {...props}
     >
-      {label && (
-        <Text
-          className={cn(
-            isChecked ? "text-orange-500 font-medium" : "text-gray-500",
-            labelClasses
-          )}
-        >
-          {label}
-        </Text>
+      {isChecked && (
+        <AntDesign name="check" color={variants.icon[variant]} size={12} />
       )}
-      <View
-        className={cn(
-          "w-5 h-5 border rounded flex justify-center items-center",
-          isChecked
-            ? "bg-orange-500 border-orange-500"
-            : "bg-transparent border-gray-400"
-        )}
-      >
-        {isChecked && <AntDesign name="check" color="#FFF" size={14} />}
-      </View>
     </TouchableOpacity>
   );
 };

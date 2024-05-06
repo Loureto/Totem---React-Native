@@ -17,7 +17,6 @@ const cnpjMask = (value: string) => {
 
 const dateMask = (value: string) => {
   const formattedText = value.replace(/[^0-9\/]/g, "");
-  console.log(formattedText);
   return formattedText
     .replace(/^(\d{2})(\d)/, "$1/$2")
     .replace(/^(\d{2})\/(\d{2})(\d)/, "$1/$2/$3");

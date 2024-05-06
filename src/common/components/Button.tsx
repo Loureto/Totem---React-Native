@@ -54,6 +54,8 @@ interface ButtonProps
   label: string;
   labelClasses?: string;
   isLoading?: boolean;
+  startContent?: React.ReactNode;
+  endContent?: React.ReactNode;
 }
 function Button({
   label,
@@ -61,23 +63,32 @@ function Button({
   className,
   variant,
   size,
+  startContent,
+  endContent,
   isLoading = false,
+  disabled,
   ...props
 }: ButtonProps) {
   return (
     <TouchableOpacity
       className={cn(buttonVariants({ variant, size, className }))}
+      style={{ gap: 4 }}
+      disabled={disabled}
       {...props}
     >
       {isLoading && <ActivityIndicator size="small" color="#FFF" />}
       {!isLoading && (
-        <Text
-          className={cn(
-            buttonTextVariants({ variant, size, className: labelClasses })
-          )}
-        >
-          {label}
-        </Text>
+        <>
+          {startContent && startContent}
+          <Text
+            className={cn(
+              buttonTextVariants({ variant, size, className: labelClasses })
+            )}
+          >
+            {label}
+          </Text>
+          {endContent && endContent}
+        </>
       )}
     </TouchableOpacity>
   );
