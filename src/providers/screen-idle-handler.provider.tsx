@@ -45,7 +45,7 @@ export default function ScreenIdleHandlerProvider({ children }: Props) {
     );
   }, [lastClickTime]);
 
-  // useEffect(() => handleTimer(), [handleTimer]);
+  useEffect(() => handleTimer(), [handleTimer]);
 
   return (
     <TouchableWithoutFeedback className="flex flex-1" onPress={handler}>
