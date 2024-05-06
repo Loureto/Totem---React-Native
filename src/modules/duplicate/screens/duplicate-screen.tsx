@@ -14,6 +14,7 @@ import {
 } from "@/components";
 import { CardButton } from "../components";
 import { useActions } from "../hooks";
+import { formatCurrency } from "@/utils";
 
 const headItems = [
   {
@@ -106,7 +107,7 @@ export const DuplicateScreen = () => {
                     <Td>{item.date}</Td>
                     <Td>{item.deadline}</Td>
                     <Td>{item.status}</Td>
-                    <Td>a{item.invoice}</Td>
+                    <Td>{formatCurrency(+item.invoice)}</Td>
                   </BodyRow>
                 );
               }}

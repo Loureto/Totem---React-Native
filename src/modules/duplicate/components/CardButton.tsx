@@ -1,7 +1,7 @@
 import { DuplicateIcon, LocIcon, ReligacaoIcon, Spacing } from "@/components";
-import { cn } from "@/lib";
 import { Text as TextNative, TouchableOpacity, View } from "react-native";
 import { TouchableProps } from "react-native-svg";
+import { cn } from "@/lib";
 
 type Params = TouchableProps & {
   uc?: string;
